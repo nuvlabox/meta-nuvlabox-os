@@ -1,0 +1,1 @@
+hostname="nuvlabox-${MACHINE}"

@@ -19,6 +19,8 @@ inherit setuptools3
 
 DEPENDS += "${PYTHON_PN}-pyyaml ${PYTHON_PN}-jinja2"
 
+RDEPENDS_${PN} += "${PYTHON_PN}-pyyaml ${PYTHON_PN}-jinja2 ${PYTHON_PN}-modules"
+
 do_install_append() {
     set +e
 

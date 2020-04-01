@@ -3,7 +3,7 @@ DESCRIPTION = "Check if Docker Swarm mode is enabled on every boot.\
 If Docker is not running in Swarm mode then this script will attempt \
 to enable it. \
 If Swarm mode is already enabled, then we leave it be."
-LICENSE = "Apache 2.0"
+LICENSE = "Apache-2.0"
 
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=86d3f3a95c324c9479bd8986968f4327"
 

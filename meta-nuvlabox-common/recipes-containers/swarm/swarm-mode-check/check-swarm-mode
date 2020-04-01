@@ -1,0 +1,23 @@
+#!/bin/sh
+#
+# For checking if Swarm mode is enabled for Docker
+#
+
+# __copyright__ = "Copyright (C) 2020 SixSq"
+# __email__ = "support@sixsq.com"
+
+# the Docker systemd service might take some time to start
+while [[ "$(systemctl is-active docker)" != "active" ]]
+do
+  sleep 5
+done
+
+# check the current Docker Swarm state
+swarm_mode_state=$(docker info -f '{{ .Swarm.LocalNodeState}}')
+
+# if swarm is disabled, start it
+if [[ "$swarm_mode_state" != "active" ]]
+then
+  # TODO: if there are multiple active interfaces, this will fail without --advertise-addr
+  docker swarm init
+fi

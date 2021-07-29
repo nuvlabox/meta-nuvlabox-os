@@ -11,3 +11,7 @@ This README file contains information on the contents of the meta-nuvlabox-os la
    - layers: meta, meta-poky
  - URI: git://github.com/openembedded/meta-openembedded
    - layers: meta-oe, meta-filesystem, meta-networking, meta-python
+
+## Copyright
+
+Copyright &copy; 2021, SixSq SA
